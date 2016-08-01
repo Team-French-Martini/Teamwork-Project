@@ -1,0 +1,3 @@
+function LifeBonus(){
+    //todo: Spas
+}
