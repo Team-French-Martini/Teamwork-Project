@@ -1,9 +1,17 @@
 function PlayButton(){
-    //to do: Loriana
+    this.buttonImage = new Kinetic.Image({
+      x: ButtonsConstants.PlayButtonStartingX,
+      y: ButtonsConstants.PlayButtonStartingY,
+      image: Images.PlayBtn
+  });
 }
 
 function ExitButton(){
-    //to do: Hristina/Loriana
+    this.buttonImage = new Kinetic.Image({
+      x: ButtonsConstants.ExitButtonStartingX,
+      y: ButtonsConstants.ExitButtonStartingY,
+      image: Images.ExitBtn
+  });
 }
 
 function RestartButton(){
@@ -11,5 +19,9 @@ function RestartButton(){
 }
 
 function HighScoresButton(){
-    //to do:Loriana
+    this.buttonImage = new Kinetic.Image({
+      x: ButtonsConstants.HighScoresButtonStartingX,
+      y: ButtonsConstants.HighScoresButtonStartingY,
+      image: Images.HighScoresBtn
+  });
 }

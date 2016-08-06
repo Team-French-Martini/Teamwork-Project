@@ -1,6 +1,7 @@
 var ImageSourses = {
     PlayBgr: "images/PlayBackground.png",
     MenuBgr: "images/MenuBackground.jpg",
+    TitlePic: "images/Title.png",
     ExitBgr: "images/ExitBackground.png",
     PlayBtn: "images/PlayButton.png",
     ExitBtn: "images/ExitButton.png",
@@ -42,6 +43,13 @@ var BackgroundConstants = {
     ExitBackgroundWidth: 1000,
     ExitBackgroundHeight: 600,
 }; 
+
+var TitleConstants = {
+    TitlePicStartingX: 200,
+    TitlePicStartingY: 140,
+    TitlePicWidth: 575,
+    TitlePicHeight: 110,
+}
 
 var ButtonsConstants = {
     PlayButtonStartingX: 200,

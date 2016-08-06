@@ -9,7 +9,13 @@ function PlayBackground(){
 }
 
 function MenuBackground(){
-    //to do: Loriana
+    this.backgroundImage = new Kinetic.Image({
+      x: BackgroundConstants.MenuBackgroundStartingX,
+      y: BackgroundConstants.MenuBackgroundStartingY,
+      image: Images.MenuBgr,
+      width: BackgroundConstants.MenuBackgroundWidth,
+      height: BackgroundConstants.MenuBackgroundHeight
+  });
 }
 
 function ExitBackground(){
