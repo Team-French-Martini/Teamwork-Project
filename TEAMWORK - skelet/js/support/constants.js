@@ -99,7 +99,7 @@ var PlayerConstants = {
 };
 
 var CoinConstants = {
-    VelocityDown:{x: 0, y: 5},
+    VelocityDown:{x: 0, y: 3},
     CoinValueOne: 5,
     CoinValueTwo: 15,
     CoinVerticalLimit: 520,

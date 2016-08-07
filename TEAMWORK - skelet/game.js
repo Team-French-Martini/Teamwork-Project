@@ -11,7 +11,7 @@ function run() {
 
     //update
     gameStateManager.currentState().update();
-
+    
     requestAnimationFrame(run);
 }
 
