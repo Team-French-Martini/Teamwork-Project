@@ -3,8 +3,10 @@ var ImageSourses = {
     MenuBgr: "images/MenuBackground.jpg",
     TitlePic: "images/Title.png",
     ExitBgr: "images/ExitBackground.jpg",
+    HighScoresBgr: "images/HighScoresBackground.png",
     PlayBtn: "images/PlayButton.png",
     ExitBtn: "images/ExitButton.png",
+    HighScoresCloseBtn: "images/HighScoresCloseButton.png",
     RestartBtn: "images/RestartButton.png",
     HighScoresBtn: "images/HighScoresButton.png",
     Player: "images/Player.png",
@@ -42,6 +44,11 @@ var BackgroundConstants = {
     ExitBackgroundStartingY: 0,
     ExitBackgroundWidth: 1000,
     ExitBackgroundHeight: 600,
+    
+    HighScoresBackgroundStartingX: 0,
+    HighScoresBackgroundStartingY: 0,
+    HighScoresBackgroundWidth: 1000,
+    HighScoresBackgroundHeight: 600,
 }; 
 
 var TitleConstants = {
@@ -60,6 +67,10 @@ var ButtonsConstants = {
 
     HighScoresButtonStartingX: 400,
     HighScoresButtonStartingY: 450,
+    
+    HighScoresCloseButtonStartingX: 400,
+    HighScoresCloseButtonStartingY: 450,
+
 
     RestartButtonStartingX: 200,
     RestartButtonStartingY: 450,
