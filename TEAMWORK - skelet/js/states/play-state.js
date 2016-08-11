@@ -58,6 +58,7 @@ function PlayState(gameStateManagerObj) {
                    
                 //     // this.player.playerLives -= 1;
                 //     // if (this.player.playerLives === 0) {
+                            appendHighScore(this.playerPoints); //  <----- Highscore part
                 //         var nextState = new ExitState(this.gameStateManager);
                 //         this.gameStateManager.states.push(nextState);
 
@@ -98,3 +99,28 @@ function PlayState(gameStateManagerObj) {
 
 }
 
+function appendHighScore(playerPoints) {
+    if (localStorage.length < GameConstants.HighScoresTop) {
+        localStorage.setItem((new Date()).toString(), JSON.stringify(playerPoints));
+    }
+    else {
+        var shouldAddPoints = false;
+        var keyMinPoints;
+        var highScoresMinPoints = 10000000000000;
+        for (var key in localStorage) {
+            if (localStorage[key] < playerPoints) {
+                shouldAddPoints = true;
+            }
+            
+            if (highScoresMinPoints > localStorage[key]) {
+                keyMinPoints = key;
+                highScoresMinPoints = localStorage[key];
+            }
+        }
+
+        if (shouldAddPoints) {
+            localStorage.removeItem(keyMinPoints);
+            localStorage.setItem((new Date()).toString(), JSON.stringify(playerPoints));
+        }
+    }
+}
