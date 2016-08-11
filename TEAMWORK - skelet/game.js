@@ -26,6 +26,6 @@ function initStage(containerName){
 }
 
 function initStartingState(gameStateManagerObj){
-    var startingState = new MenuState(gameStateManagerObj);
+    var startingState = new PlayState(gameStateManagerObj);
     gameStateManagerObj.states.push(startingState);
 }

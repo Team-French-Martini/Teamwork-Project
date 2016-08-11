@@ -14,7 +14,9 @@ var ImageSourses = {
     CoinTwo: "images/CoinStar.png",
     Rock: "images/Rock.png",
     Bomb: "images/Bomb.png",
-    LifeBonus: "images/LIFEbonus.png"
+    LifeBonus: "images/LIFEbonus.png",
+    CoinsResult:"images/CoinsResult.png",
+    LivesResult:"images/LivesResult.png"
 };
 
 var Images = loadImages(ImageSourses);

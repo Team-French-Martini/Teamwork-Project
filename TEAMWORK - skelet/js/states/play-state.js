@@ -5,9 +5,12 @@ function PlayState(gameStateManagerObj) {
         this.background = new PlayBackground(),
         this.player = new Player(),
         this.bomb = new Bomb(),
-
-        // this.playerLives = GameConstants.StartingLives,
-        // this.playerPoints = GameConstants.StartingPoints,
+        this.coinsResult= new CoinsResult(),
+        this.livesResult= new LivesResult(),
+        this.coinsText = new CoinsText(),
+        this.livesText = new LivesText(),
+        this.playerLives = GameConstants.StartingLives,
+        this.playerPoints = GameConstants.StartingPoints,
 
         this.FallingObjectInit =  function () {
 
@@ -40,7 +43,7 @@ function PlayState(gameStateManagerObj) {
                 var currentFallingObject = this.listOfFallingObjects[i];
 
                 //this.player.playerLives = 3;
-                 console.log(this.player);
+                // console.log(this.player);
 
                 currentFallingObject.moveDown();
                 var collisionDetected = detectCollision(currentFallingObject, this.player);
@@ -53,8 +56,8 @@ function PlayState(gameStateManagerObj) {
 
                     //this is used to simulate +life
                     if(currentFallingObject instanceof LifeBonus){
-                        this.player.playerLives+=1;
-                        
+                        this.playerLives+=1;
+                        this.livesText.text.setText(this.playerLives);
                     }
 
                     //this is used to simulate if Bomb hits player
@@ -66,7 +69,8 @@ function PlayState(gameStateManagerObj) {
                 //this is used to simulate death
                      if (currentFallingObject instanceof Rock) {
                    
-                      this.player.playerLives -= 1;
+                      this.playerLives -= 1;
+                      this.livesText.text.setText(this.playerLives);
                       if (this.player.playerLives === 0) {
                             appendHighScore(this.playerPoints); //  <----- Highscore part
                          var nextState = new ExitState(this.gameStateManager);
@@ -75,6 +79,17 @@ function PlayState(gameStateManagerObj) {
                         }
 
                     }
+                      if (currentFallingObject instanceof CoinOne) {
+                   
+                      this.playerPoints += CoinConstants.CoinValueOne;
+                      this.coinsText.text.setText(this.playerPoints);
+                      }
+                    if (currentFallingObject instanceof CoinTwo) {
+                     this.playerPoints += CoinConstants.CoinValueTwo;
+                     this.coinsText.text.setText(this.playerPoints);
+                        }
+
+                
                 }
 
                               
@@ -96,6 +111,10 @@ function PlayState(gameStateManagerObj) {
         },
         this.layer.add(this.background.backgroundImage);
     this.layer.add(this.player.playerSprite);
+    this.layer.add(this.coinsResult.coinsImage);
+    this.layer.add(this.livesResult.livesImage);
+    this.layer.add(this.coinsText.text);
+    this.layer.add(this.livesText.text);
     for (var i = 0; i < this.listOfFallingObjects.length; i += 1) {
         var coin = this.listOfFallingObjects[i];
         this.layer.add(coin.image);
