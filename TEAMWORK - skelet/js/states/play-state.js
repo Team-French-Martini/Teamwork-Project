@@ -40,8 +40,16 @@ function PlayState(gameStateManagerObj) {
     this.update = function () {
         this.player.update();
 
+<<<<<<< HEAD
         var currentBomb = this.bomb;
         this.layer.add(currentBomb.image);
+=======
+                    //this is used to simulate if Bomb hits player
+                    if(currentFallingObject instanceof Bomb)
+                    {
+                        this.playerLives-=3;
+                        this.livesText.text.setText(this.playerLives)
+>>>>>>> origin/master
 
         currentBomb.moveDown();
 
