@@ -146,11 +146,11 @@ var LifeBonusConstants = {
 };
 
 var BombConstants= {
-    VelocityHorizontal: {x: 6, y: 0},
+    VelocityHorizontal: {x: -6, y: 0},
     BombWidth: 22,
     BombHeight: 22,
     BombYSideLimit: 900,
-    BombXSideLimit: -3000
+    BombXSideLimit: -700
 }
 
 
