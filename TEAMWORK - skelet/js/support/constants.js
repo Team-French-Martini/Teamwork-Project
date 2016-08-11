@@ -13,7 +13,7 @@ var ImageSourses = {
     CoinOne: "images/CoinFish.png",
     CoinTwo: "images/CoinStar.png",
     Rock: "images/Rock.png",
-    BombImage: "images/Bomb.png",
+    Bomb: "images/Bomb.png",
     LifeBonus: "images/LIFEbonus.png",
     CoinsResult:"images/CoinsResult.png",
     LivesResult:"images/LivesResult.png"
@@ -146,21 +146,11 @@ var LifeBonusConstants = {
 };
 
 var BombConstants= {
-<<<<<<< HEAD
     VelocityHorizontal: {x: -6, y: 0},
     BombWidth: 22,
     BombHeight: 22,
     BombYSideLimit: 900,
     BombXSideLimit: -700
-=======
-    VelocityHorizontal: {x: 6, y: 0},
-    StartingX: 1010,
-    StartingY:705,
-    BombWidth: 22,
-    BombHeight: 22,
-    BombYSideLimit: 720,
-    BombXSideLimit: -3000
->>>>>>> origin/master
 }
 
 
