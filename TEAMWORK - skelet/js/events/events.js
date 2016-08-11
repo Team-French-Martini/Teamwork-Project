@@ -207,12 +207,30 @@ attachMenuStateButtonsEvents = function(menuStateObj){
         var nextState = new PlayState(menuStateObj.gameStateManager);
         menuStateObj.gameStateManager.states.push(nextState);
     });
+    menuStateObj.playButton.buttonImage.addEventListener('mouseover', function(){
+        document.body.style.cursor='pointer';
+    });
+    menuStateObj.playButton.buttonImage.addEventListener('mouseout', function(){
+        document.body.style.cursor='auto';
+    });
     menuStateObj.highScoresButton.buttonImage.addEventListener('click', function(){
     var nextState = new HighScoresState(menuStateObj.gameStateManager);
         menuStateObj.gameStateManager.states.push(nextState);
     });
+    menuStateObj.highScoresButton.buttonImage.addEventListener('mouseover', function(){
+        document.body.style.cursor='pointer';
+    });
+    menuStateObj.highScoresButton.buttonImage.addEventListener('mouseout', function(){
+        document.body.style.cursor='auto';
+    });
     menuStateObj.exitButton.buttonImage.addEventListener('click', function(){
         window.close();
+    });
+    menuStateObj.exitButton.buttonImage.addEventListener('mouseover', function(){
+        document.body.style.cursor='pointer';
+    });
+    menuStateObj.exitButton.buttonImage.addEventListener('mouseout', function(){
+        document.body.style.cursor='auto';
     });
 };
 
