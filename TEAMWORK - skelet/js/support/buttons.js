@@ -31,3 +31,11 @@ function HighScoresButton(){
       image: Images.HighScoresBtn
   });
 }
+
+function HighScoresCloseButton(){
+    this.buttonImage = new Kinetic.Image({
+        x: ButtonsConstants.HighScoresCloseButtonStartingX,
+        y: ButtonsConstants.HighScoresCloseButtonStartingY,
+        image: Images.HighScoresCloseBtn
+    });
+}
