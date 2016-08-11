@@ -63,6 +63,8 @@ function PlayState(gameStateManagerObj) {
                     //this is used to simulate if Bomb hits player
                     if(currentFallingObject instanceof Bomb)
                     {
+                        this.playerLives-=3;
+                        this.livesText.text.setText(this.playerLives)
 
                         
                     }
