@@ -128,6 +128,68 @@ fallingCoinsLogic = function(menuStateObj) {
     }
 };
 
+fallingLifeBonusesLogic = function (lifeStateObj) {
+    var exist = document.getElementById('fallingBonuses')
+    if(exist){
+        exist.parentNode.removeChild(exist);
+        return false;
+    }
+    var element = document.querySelector(lifeStateObj);
+    var canvas = document.createElement('canvas'),
+        ctx = canvas.getContext('2d'),
+        focused = false;
+
+    canvas.width = "1000";
+    canvas.height = "600";
+    canvas.id = 'fallingBonuses';
+    canvas.style.position="absolute";
+    canvas.style.top="10px";
+    var lifeBonus = new Image();
+    lifeBonus.src = 'https://upload.wikimedia.org/wikipedia/commons/d/d0/Farm-Fresh_heart.png'
+
+    lifeBonus.onload = function () {
+        element.appendChild(canvas)
+        focused = true;
+        drawloop();
+    }
+    var bonuses = []
+
+    function drawloop() {
+        if (focused) {
+            requestAnimationFrame(drawloop);
+        }
+
+        ctx.clearRect(0, 0, canvas.width, canvas.height)
+
+        if (Math.random() < .3) {
+            bonuses.push({
+                x: Math.random() * canvas.width | 0,
+                y: -50,
+                dy: 3,
+                s: 0.5 + Math.random(),
+                state: Math.random() * 10 | 0
+            })
+        }
+        var i = bonuses.length
+        while (i--) {
+            var x = bonuses[i].x
+            var y = bonuses[i].y
+            var s = bonuses[i].s
+            var state = bonuses[i].state
+            bonuses[i].state = (state > 9) ? 0 : state + 0.1
+            bonuses[i].dy += 0.3
+            bonuses[i].y += bonuses[i].dy
+
+            ctx.drawImage(lifeBonus, 44 * Math.floor(state), 0, 44, 40, x, y, 44 * s, 40 * s)
+
+            if (y > canvas.height) {
+                bonuses.splice(i, 1);
+            }
+        }
+    }
+};
+
+
 attachMenuStateTitleEvents = function(menuStateObj) {
 
     menuStateObj.title.titleImage.addEventListener('mouseover',function(){

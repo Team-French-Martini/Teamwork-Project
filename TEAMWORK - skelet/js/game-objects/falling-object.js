@@ -6,8 +6,9 @@ function FallingObject() {
 
     if(num <=5){
         return new Coin();
-    }else
-    {
-        return new Rock();
+    }else if(num<=10){
+        return new Rock()
+    }else{
+        return new LifeBonus()
     }
 }

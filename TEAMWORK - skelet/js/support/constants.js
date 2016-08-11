@@ -13,7 +13,8 @@ var ImageSourses = {
     CoinOne: "images/CoinFish.png",
     CoinTwo: "images/CoinStar.png",
     Rock: "images/Rock.png",
-    Bomb: "images/Bomb.png"
+    Bomb: "images/Bomb.png",
+    LifeBonus: "images/LIFEbonus.png"
 };
 
 var Images = loadImages(ImageSourses);
@@ -131,6 +132,15 @@ var RockConstants = {
     RockHeight: 40,
     RockSideLimit: 900,
     RockUpperLimit: -200
+};
+
+var LifeBonusConstants = {
+    VelocityDown:{x: 0, y: 5},
+    LifeBonusVerticalLimit: 520,
+    LifeBonusWidth: 36,
+    LifeBonusHeight: 36,
+    LifeBonusSideLimit: 900,
+    LifeBonusUpperLimit: -200
 };
 
 

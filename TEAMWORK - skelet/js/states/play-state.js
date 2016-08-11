@@ -51,20 +51,24 @@ function PlayState(gameStateManagerObj) {
                     this.listOfFallingObjects.push(fallingObjectToAdd);
                     this.layer.add(fallingObjectToAdd.image);
 
-                    
+                    //this is used to simulate +life
+                    if(currentFallingObject instanceof LifeBonus){
+                        this.player.playerLives+=1;
+                        
+                    }
                 //this is used to simulate death
-                //     if (currentFallingObject instanceof Rock) {
+                     if (currentFallingObject instanceof Rock) {
                    
                    
-                //     // this.player.playerLives -= 1;
-                //     // if (this.player.playerLives === 0) {
+                      this.player.playerLives -= 1;
+                      if (this.player.playerLives === 0) {
                             appendHighScore(this.playerPoints); //  <----- Highscore part
-                //         var nextState = new ExitState(this.gameStateManager);
-                //         this.gameStateManager.states.push(nextState);
+                         var nextState = new ExitState(this.gameStateManager);
+                         this.gameStateManager.states.push(nextState);
 
-                //     // }
+                        }
 
-                // }
+                    }
                 }
 
                               
