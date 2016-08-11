@@ -29,3 +29,13 @@ function ExitBackground(){
         height: BackgroundConstants.ExitBackgroundHeight
     });
 }
+
+function HighScoresBackground() {
+    this.backgroundImage = new Kinetic.Image({
+        x: BackgroundConstants.HighScoresBackgroundStartingX,
+        y: BackgroundConstants.HighScoresBackgroundStartingY,
+        image: Images.HighScoresBgr,
+        width: BackgroundConstants.HighScoresBackgroundWidth,
+        height: BackgroundConstants.HighScoresBackgroundHeight
+    });
+}
