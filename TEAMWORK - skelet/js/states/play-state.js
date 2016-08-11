@@ -71,7 +71,7 @@ function PlayState(gameStateManagerObj) {
                    
                       this.playerLives -= 1;
                       this.livesText.text.setText(this.playerLives);
-                      if (this.player.playerLives === 0) {
+                      if (this.playerLives === 0) {
                             appendHighScore(this.playerPoints); //  <----- Highscore part
                          var nextState = new ExitState(this.gameStateManager);
                          this.gameStateManager.states.push(nextState);
