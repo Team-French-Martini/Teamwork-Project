@@ -56,6 +56,13 @@ function PlayState(gameStateManagerObj) {
                         this.player.playerLives+=1;
                         
                     }
+
+                    //this is used to simulate if Bomb hits player
+                    if(currentFallingObject instanceof Bomb)
+                    {
+
+                        
+                    }
                 //this is used to simulate death
                      if (currentFallingObject instanceof Rock) {
                    

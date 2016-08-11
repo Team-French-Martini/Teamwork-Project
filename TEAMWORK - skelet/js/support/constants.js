@@ -143,6 +143,14 @@ var LifeBonusConstants = {
     LifeBonusUpperLimit: -200
 };
 
+var BombConstants= {
+    VelocityHorizontal: {x: 6, y: 0},
+    BombWidth: 22,
+    BombHeight: 22,
+    BombYSideLimit: 900,
+    BombXSideLimit: -3000
+}
+
 
 function loadImages(sourcesObj){
     var loadedImages = 0;
