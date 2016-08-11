@@ -59,7 +59,6 @@ function PlayState(gameStateManagerObj) {
                 //this is used to simulate death
                      if (currentFallingObject instanceof Rock) {
                    
-                   
                       this.player.playerLives -= 1;
                       if (this.player.playerLives === 0) {
                             appendHighScore(this.playerPoints); //  <----- Highscore part

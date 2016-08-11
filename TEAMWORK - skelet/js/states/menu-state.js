@@ -23,6 +23,5 @@ function MenuState (gameStateManagerObj){
     this.layer.add(this.playButton.buttonImage);
     this.layer.add(this.highScoresButton.buttonImage);
     this.layer.add(this.exitButton.buttonImage);
-
     this.gameStateManager.stage.add(this.layer);
 }

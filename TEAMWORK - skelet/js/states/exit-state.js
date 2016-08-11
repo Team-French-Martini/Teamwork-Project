@@ -18,6 +18,5 @@ function ExitState(gameStateManagerObj){
     //this.layer.add(this.screen.ScoreScreen);
     this.layer.add(this.restartButton.buttonImage);
     this.layer.add(this.exitButton.buttonImage);
-
     this.gameStateManager.stage.add(this.layer);
 }
