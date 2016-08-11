@@ -5,6 +5,10 @@ function PlayState(gameStateManagerObj) {
         this.background = new PlayBackground(),
         this.player = new Player(),
         this.bomb = new Bomb(),
+
+        // this.playerLives = GameConstants.StartingLives,
+        // this.playerPoints = GameConstants.StartingPoints,
+
         this.FallingObjectInit =  function () {
 
         var fallingObjectFirst = new FallingObject();
@@ -34,6 +38,10 @@ function PlayState(gameStateManagerObj) {
             this.player.update();
             for (var i = 0; i < this.listOfFallingObjects.length; i += 1) {
                 var currentFallingObject = this.listOfFallingObjects[i];
+
+                //this.player.playerLives = 3;
+                 console.log(this.player);
+
                 currentFallingObject.moveDown();
                 var collisionDetected = detectCollision(currentFallingObject, this.player);
                 if(collisionDetected){
@@ -42,7 +50,24 @@ function PlayState(gameStateManagerObj) {
                     var fallingObjectToAdd = new FallingObject();
                     this.listOfFallingObjects.push(fallingObjectToAdd);
                     this.layer.add(fallingObjectToAdd.image);
+
+                    
+                //this is used to simulate death
+                //     if (currentFallingObject instanceof Rock) {
+                   
+                   
+                //     // this.player.playerLives -= 1;
+                //     // if (this.player.playerLives === 0) {
+                //         var nextState = new ExitState(this.gameStateManager);
+                //         this.gameStateManager.states.push(nextState);
+
+                //     // }
+
+                // }
                 }
+
+                              
+
                 var currentY = currentFallingObject.image.getY();
                 var fallDetected = currentY >= CoinConstants.CoinVerticalLimit;
                 if(fallDetected)

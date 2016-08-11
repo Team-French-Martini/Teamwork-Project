@@ -2,7 +2,7 @@ var ImageSourses = {
     PlayBgr: "images/PlayBackground.png",
     MenuBgr: "images/MenuBackground.jpg",
     TitlePic: "images/Title.png",
-    ExitBgr: "images/ExitBackground.png",
+    ExitBgr: "images/ExitBackground.jpg",
     PlayBtn: "images/PlayButton.png",
     ExitBtn: "images/ExitButton.png",
     RestartBtn: "images/RestartButton.png",

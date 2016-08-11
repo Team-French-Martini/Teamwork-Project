@@ -16,6 +16,12 @@ function ExitButton(){
 
 function RestartButton(){
     //to do: Hristina
+
+    this.buttonImage = new Kinetic.Image({
+        x: ButtonsConstants.RestartButtonStartingX,
+        y: ButtonsConstants.RestartButtonStartingY,
+        image: Images.RestartBtn
+    });
 }
 
 function HighScoresButton(){

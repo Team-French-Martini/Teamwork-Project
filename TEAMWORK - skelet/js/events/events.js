@@ -139,6 +139,7 @@ attachMenuStateTitleEvents = function(menuStateObj) {
     });
 };
 
+
 attachMenuStateButtonsEvents = function(menuStateObj){
     menuStateObj.playButton.buttonImage.addEventListener('click', function(){
         var nextState = new PlayState(menuStateObj.gameStateManager);
@@ -153,7 +154,22 @@ attachMenuStateButtonsEvents = function(menuStateObj){
     });
 };
 
-attatchExitStateButtonsEvents = function(exitStateObj){
-    //to do Hristina
-    // write to .txt - Hristina
+attatchExitStateButtonsEvents = function(exitStateObj){   
+    exitStateObj.restartButton.buttonImage.addEventListener('click', function () {
+        //clears exit state
+        exitStateObj.gameStateManager.currentState().layer.remove();
+        exitStateObj.gameStateManager.states.pop();
+
+        //clears previous state
+        exitStateObj.gameStateManager.currentState().layer.remove();
+        exitStateObj.gameStateManager.state.pop();
+
+        //starting next play
+        var nextState = new PlayState(exitStateObj.gameStateManager);
+        exitStateObj.gameStateManager.states.push(nextState);
+    });
+
+    exitStateObj.exitButton.buttonImage.addEventListener('click', function () {
+        window.close();
+    });
 };

@@ -4,6 +4,7 @@ function Player(){
         y: PlayerConstants.StartingY,
         width: PlayerConstants.PlayerWidth,
         height: PlayerConstants.PlayerHeight,
+        playerLives: GameConstants.StartingLives,
         image: Images.Player,
         animation: 'standing_Left',
         animations: {

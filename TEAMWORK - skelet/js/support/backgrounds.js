@@ -20,4 +20,12 @@ function MenuBackground(){
 
 function ExitBackground(){
     //to do: Hristina
+
+    this.backgroundImage = new Kinetic.Image({
+        x: BackgroundConstants.ExitBackgroundStartingX,
+        y: BackgroundConstants.ExitBackgroundStartingY,
+        image: Images.ExitBgr,
+        width: BackgroundConstants.ExitBackgroundWidth,
+        height: BackgroundConstants.ExitBackgroundHeight
+    });
 }
