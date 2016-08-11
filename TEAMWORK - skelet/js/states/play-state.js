@@ -63,7 +63,7 @@ function PlayState(gameStateManagerObj) {
             bombCollision=false;
 
             console.log("udar");
-            this.playerLives -= 1;
+            this.playerLives -= 3;
             this.livesText.text.setText(this.playerLives);
             if (this.playerLives <= 0) {
                 appendHighScore(this.playerPoints); //  <----- Highscore part
@@ -97,7 +97,7 @@ function PlayState(gameStateManagerObj) {
 
                 //this is used to simulate if Bomb hits player
                 if (currentFallingObject instanceof Bomb) {
-                    this.playerLives -= 1;
+                    this.playerLives -= 3;
                     this.livesText.text.setText(this.playerLives);
 
                 }

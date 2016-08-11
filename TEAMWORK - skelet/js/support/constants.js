@@ -150,7 +150,7 @@ var BombConstants= {
     BombWidth: 22,
     BombHeight: 22,
     BombYSideLimit: 900,
-    BombXSideLimit: -700
+    BombXSideLimit: -2000
 }
 
 
